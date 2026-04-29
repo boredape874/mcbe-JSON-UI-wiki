@@ -53,6 +53,8 @@ Then the animated child listens to that event:
 }
 ```
 
+For a copy-ready toggle snippet, see [Code Examples](../examples/index.md#custom-toggle).
+
 ## Animated Toggle Illusion
 
 For an on/off animation, split the problem:

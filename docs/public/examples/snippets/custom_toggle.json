@@ -1,0 +1,78 @@
+{
+  "namespace": "wiki_toggle",
+
+  "toggle_row": {
+    "type": "panel",
+    "size": [180, 24],
+    "controls": [
+      {
+        "sound_toggle@common.toggle": {
+          "toggle_name": "wiki.sound_enabled",
+          "toggle_default_state": true,
+          "size": [34, 18],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "checked_control": "checked",
+          "unchecked_control": "unchecked",
+          "checked_hover_control": "checked_hover",
+          "unchecked_hover_control": "unchecked_hover",
+          "controls": [
+            {
+              "checked@wiki_toggle.toggle_face": {
+                "$texture": "textures/ui/toggle_on",
+                "$text": "ON"
+              }
+            },
+            {
+              "unchecked@wiki_toggle.toggle_face": {
+                "$texture": "textures/ui/toggle_off",
+                "$text": "OFF"
+              }
+            },
+            {
+              "checked_hover@wiki_toggle.toggle_face": {
+                "$texture": "textures/ui/toggle_on_hover",
+                "$text": "ON"
+              }
+            },
+            {
+              "unchecked_hover@wiki_toggle.toggle_face": {
+                "$texture": "textures/ui/toggle_off_hover",
+                "$text": "OFF"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_face": {
+    "type": "panel",
+    "$texture|default": "textures/ui/toggle_off",
+    "$text|default": "OFF",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "texture": "$texture",
+          "size": ["100%", "100%"]
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "$text",
+          "localize": false,
+          "font_size": "small",
+          "font_scale_factor": 0.75,
+          "text_alignment": "center",
+          "size": ["100%", "100%"],
+          "color": [1, 1, 1],
+          "shadow": true
+        }
+      }
+    ]
+  }
+}

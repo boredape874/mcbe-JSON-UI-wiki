@@ -17,11 +17,14 @@ hero:
     - theme: alt
       text: Empezar en español
       link: /es/guide/what-is-json-ui
+    - theme: alt
+      text: Open code examples
+      link: /en/examples/
 features:
   - title: Beginner-first
     details: Starts from what a resource pack is and how Bedrock loads UI files.
   - title: Visual
     details: Uses diagrams before deep JSON examples.
   - title: Practical
-    details: Focuses on screens, server forms, HUDs, bindings, textures, and real debugging.
+    details: Includes copy-ready RP/BP examples, snippets, server forms, HUDs, bindings, textures, and real debugging.
 ---

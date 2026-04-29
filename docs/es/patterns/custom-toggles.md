@@ -53,6 +53,8 @@ El hijo animado escucha ese evento:
 }
 ```
 
+Para ver un snippet listo para copiar, abre [Ejemplos con código](../examples/index.md#toggle-personalizado).
+
 ## Ilusión de toggle animado
 
 Para una animación on/off, divide el problema:

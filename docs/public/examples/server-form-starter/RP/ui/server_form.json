@@ -1,0 +1,233 @@
+{
+  "namespace": "server_form",
+
+  "third_party_server_screen@common.base_screen": {
+    "$screen_content": "server_form.wiki_screen_content",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.22,
+    "render_game_behind": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "wiki_screen_content": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "form_factory": {
+          "type": "factory",
+          "control_ids": {
+            "long_form": "@server_form.wiki_action_form",
+            "custom_form": "@server_form.wiki_action_form"
+          }
+        }
+      }
+    ]
+  },
+
+  "wiki_action_form": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "screen_tint": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.35,
+          "size": ["100%", "100%"],
+          "layer": 0
+        }
+      },
+      {
+        "frame": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.78,
+          "size": [420, 238],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1
+        }
+      },
+      {
+        "accent": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [0.55, 0.23, 1.0],
+          "alpha": 0.95,
+          "size": [420, 4],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [0, -119],
+          "layer": 2
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "#title_text",
+          "localize": false,
+          "font_type": "MinecraftTen",
+          "font_size": "large",
+          "font_scale_factor": 1.1,
+          "text_alignment": "left",
+          "color": [1, 1, 1],
+          "shadow": true,
+          "size": [370, 28],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [-6, -93],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            }
+          ]
+        }
+      },
+      {
+        "body": {
+          "type": "label",
+          "text": "#form_text",
+          "localize": false,
+          "font_type": "default",
+          "font_size": "normal",
+          "font_scale_factor": 1.0,
+          "text_alignment": "left",
+          "color": [0.82, 0.82, 0.88],
+          "shadow": true,
+          "size": [370, 40],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [-6, -58],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#form_text"
+            }
+          ]
+        }
+      },
+      {
+        "buttons@server_form.wiki_button_grid": {}
+      }
+    ]
+  },
+
+  "wiki_button_grid": {
+    "type": "grid",
+    "size": [370, 126],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [0, 32],
+    "grid_dimensions": [1, 6],
+    "grid_item_template": "server_form.wiki_menu_button",
+    "collection_name": "form_buttons",
+    "maximum_grid_items": 6,
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "wiki_menu_button": {
+    "type": "button",
+    "size": [370, 20],
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.form_button_click",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.form_button_click",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {
+        "default@server_form.wiki_button_face": {
+          "$alpha": 0.30,
+          "$text_color": [0.95, 0.95, 1.0],
+          "$press_offset": [0, 0]
+        }
+      },
+      {
+        "hover@server_form.wiki_button_face": {
+          "$alpha": 0.48,
+          "$text_color": [1.0, 0.90, 0.55],
+          "$press_offset": [0, 0]
+        }
+      },
+      {
+        "pressed@server_form.wiki_button_face": {
+          "$alpha": 0.62,
+          "$text_color": [1.0, 0.80, 0.35],
+          "$press_offset": [0, 1]
+        }
+      }
+    ]
+  },
+
+  "wiki_button_face": {
+    "type": "panel",
+    "$alpha|default": 0.30,
+    "$text_color|default": [1, 1, 1],
+    "$press_offset|default": [0, 0],
+    "size": ["100%", "100%"],
+    "offset": "$press_offset",
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [0.21, 0.14, 0.35],
+          "alpha": "$alpha",
+          "size": ["100%", "100%"],
+          "layer": 0
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "#form_button_text",
+          "localize": false,
+          "font_type": "default",
+          "font_size": "normal",
+          "font_scale_factor": 1.0,
+          "text_alignment": "center",
+          "color": "$text_color",
+          "shadow": true,
+          "size": ["100%", "100%"],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#form_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

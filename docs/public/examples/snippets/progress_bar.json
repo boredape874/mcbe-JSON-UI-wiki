@@ -1,0 +1,42 @@
+{
+  "namespace": "wiki_progress",
+
+  "progress_bar_60": {
+    "type": "panel",
+    "size": [204, 14],
+    "controls": [
+      {
+        "frame": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.70,
+          "size": ["100%", "100%"],
+          "layer": 0
+        }
+      },
+      {
+        "clip": {
+          "type": "panel",
+          "size": [120, 10],
+          "clips_children": true,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [2, 0],
+          "layer": 1,
+          "controls": [
+            {
+              "fill": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "color": [0.25, 0.85, 0.35],
+                "size": [200, 10],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "namespace": "wiki_search",
+
+  "search_box@common.text_edit_box": {
+    "size": [220, 24],
+    "$text_box_name": "wiki_search_text_box",
+    "$text_edit_text_control": "search_text",
+    "$place_holder_text": "Search...",
+    "$text_clear_button_enabled": true,
+    "$text_edit_box_clear_to_button_id": "button.wiki_search_clear"
+  },
+
+  "filtered_form_button@common_buttons.light_content_button": {
+    "size": ["100%", 24],
+    "$pressed_button_name": "button.form_button_click",
+    "$button_content": "wiki_search.filtered_button_label",
+    "property_bag": {
+      "#search": ""
+    },
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "search_text",
+        "source_property_name": "#item_name",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#search = '')",
+        "target_property_name": "#search_is_empty"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - #search) = #form_button_text))",
+        "target_property_name": "#search_matches"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#search_is_empty or #search_matches)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "filtered_button_label": {
+    "type": "label",
+    "text": "#form_button_text",
+    "localize": false,
+    "size": ["100%", "100%"],
+    "text_alignment": "center",
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      }
+    ]
+  }
+}

@@ -68,3 +68,4 @@ Write the contract down before building the UI. Most broken server forms are not
 5. [Search Bars](./search-bars.md)
 6. [Locked States](./locked-states.md)
 7. [Debugging](./debugging.md)
+8. [Code Examples](../examples/index.md)

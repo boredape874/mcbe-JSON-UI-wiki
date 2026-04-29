@@ -4,18 +4,21 @@ const sharedNav = {
   en: [
     { text: "Start", link: "/en/guide/what-is-json-ui" },
     { text: "Server Forms", link: "/en/server-forms/" },
+    { text: "Examples", link: "/en/examples/" },
     { text: "Reference", link: "/en/reference/file-roles" },
     { text: "Patterns", link: "/en/patterns/" }
   ],
   ko: [
     { text: "시작하기", link: "/ko/guide/what-is-json-ui" },
     { text: "서버폼", link: "/ko/server-forms/" },
+    { text: "예제 코드", link: "/ko/examples/" },
     { text: "레퍼런스", link: "/ko/reference/file-roles" },
     { text: "패턴", link: "/ko/patterns/" }
   ],
   es: [
     { text: "Inicio", link: "/es/guide/what-is-json-ui" },
     { text: "Formularios", link: "/es/server-forms/" },
+    { text: "Ejemplos", link: "/es/examples/" },
     { text: "Referencia", link: "/es/reference/file-roles" },
     { text: "Patrones", link: "/es/patterns/" }
   ]
@@ -44,6 +47,12 @@ const sidebars = {
         { text: "Search Bars", link: "/en/server-forms/search-bars" },
         { text: "Locked States", link: "/en/server-forms/locked-states" },
         { text: "Debugging", link: "/en/server-forms/debugging" }
+      ]
+    },
+    {
+      text: "Code Examples",
+      items: [
+        { text: "Example Pack And Snippets", link: "/en/examples/" }
       ]
     },
     {
@@ -93,12 +102,18 @@ const sidebars = {
       items: [
         { text: "개요", link: "/ko/server-forms/" },
         { text: "라우팅", link: "/ko/server-forms/routing" },
-        { text: "서버 계약", link: "/ko/server-forms/server-contract" },
+        { text: "서버 연동 규칙", link: "/ko/server-forms/server-contract" },
         { text: "액션 버튼", link: "/ko/server-forms/action-buttons" },
         { text: "커스텀 폼", link: "/ko/server-forms/custom-forms" },
         { text: "검색 바", link: "/ko/server-forms/search-bars" },
         { text: "잠금 상태", link: "/ko/server-forms/locked-states" },
         { text: "디버깅", link: "/ko/server-forms/debugging" }
+      ]
+    },
+    {
+      text: "예제 코드",
+      items: [
+        { text: "예제 팩과 스니펫", link: "/ko/examples/" }
       ]
     },
     {
@@ -111,7 +126,7 @@ const sidebars = {
     {
       text: "패턴",
       items: [
-        { text: "패턴 집약", link: "/ko/patterns/" },
+        { text: "패턴 모음", link: "/ko/patterns/" },
         { text: "서버폼 패턴", link: "/ko/patterns/server-forms" },
         { text: "HUD와 채팅", link: "/ko/patterns/hud-chat" },
         { text: "커스텀 토글", link: "/ko/patterns/custom-toggles" },
@@ -126,9 +141,9 @@ const sidebars = {
         { text: "시작 화면", link: "/ko/patterns/start-screens" },
         { text: "핫바 레이아웃", link: "/ko/patterns/hotbar-layouts" },
         { text: "툴팁", link: "/ko/patterns/tooltips" },
-        { text: "특수 폼 묶음", link: "/ko/patterns/special-form-suites" },
+        { text: "특수 폼 세트", link: "/ko/patterns/special-form-suites" },
         { text: "소형 컨트롤", link: "/ko/patterns/small-controls" },
-        { text: "시각 셸", link: "/ko/patterns/visual-shells" }
+        { text: "폼 외형", link: "/ko/patterns/visual-shells" }
       ]
     }
   ],
@@ -154,6 +169,12 @@ const sidebars = {
         { text: "Barras de búsqueda", link: "/es/server-forms/search-bars" },
         { text: "Estados bloqueados", link: "/es/server-forms/locked-states" },
         { text: "Depuración", link: "/es/server-forms/debugging" }
+      ]
+    },
+    {
+      text: "Ejemplos de código",
+      items: [
+        { text: "Pack de ejemplo y snippets", link: "/es/examples/" }
       ]
     },
     {

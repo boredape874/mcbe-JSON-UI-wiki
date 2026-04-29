@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "JSON UI Wiki Server Form BP",
+    "description": "Minimal behavior pack for the MCBE JSON UI wiki server form starter.",
+    "uuid": "18ad8e71-7e05-45fc-9833-dfce9fd2ef79",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "f33df4fa-69b2-427c-b1ec-d43a1b46fd6d",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-# 시각 셸
+# 폼 외형
 
-시각 셸은 폼, HUD 패널, 메뉴를 감싸는 재사용 가능한 프레임입니다.
+폼 외형은 폼, HUD 패널, 메뉴를 감싸는 재사용 가능한 프레임입니다. 쉽게 말하면 기능마다 새로 배경과 테두리를 만들지 않고, 같은 틀 안에 내용만 갈아 끼우는 방식입니다.
 
 <img class="jsonui-diagram" src="/assets/diagrams/visual-shell.svg" alt="시각 셸 레이어">
 
@@ -33,9 +33,9 @@ JSON 컨트롤로 처리하기 좋은 것:
 - focus와 hover 상태
 - 반복 row와 버튼
 
-## 공유 셸 템플릿
+## 공유 외형 템플릿
 
-큰 팩에서는 시각 계열마다 하나의 shell template을 두는 편이 좋습니다.
+큰 팩에서는 화면 계열마다 하나의 shell template을 두는 편이 좋습니다.
 
 ```text
 common/visuals/panel_shell.json

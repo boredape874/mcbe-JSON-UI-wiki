@@ -16,6 +16,8 @@ bar_frame
 
 El frame queda fijo. Solo cambia el ancho visible del panel de clipping.
 
+El snippet listo para copiar está en [Ejemplos con código](../examples/index.md#barra-de-progreso).
+
 ## Fuentes de datos
 
 Una barra de progreso puede venir de:

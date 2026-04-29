@@ -16,6 +16,8 @@ bar_frame
 
 The frame stays fixed. Only the clipping panel changes visible width.
 
+A copy-ready clip bar snippet is included in [Code Examples](../examples/index.md#progress-bar).
+
 ## Data Sources
 
 A progress bar can be driven by:

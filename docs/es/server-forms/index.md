@@ -68,3 +68,4 @@ Escribe este contrato antes de construir la UI. La mayoría de server forms roto
 5. [Barras de búsqueda](./search-bars.md)
 6. [Estados bloqueados](./locked-states.md)
 7. [Depuración](./debugging.md)
+8. [Ejemplos con código](../examples/index.md)

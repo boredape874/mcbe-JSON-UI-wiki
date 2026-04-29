@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "JSON UI Wiki Server Form RP",
+    "description": "Minimal resource pack for the MCBE JSON UI wiki server form starter.",
+    "uuid": "c9d1cb31-631e-44b8-b101-6a9315af88b1",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "fb51c89e-7441-4cc2-bd14-f13a3c9af25d",
+      "version": [1, 0, 0]
+    }
+  ]
+}
