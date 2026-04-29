@@ -1,16 +1,16 @@
-# Wiki MCBE JSON UI
+# Wiki de MCBE JSON UI
 
-Esta wiki ensena Minecraft Bedrock JSON UI desde cero.
+Esta wiki explica Minecraft Bedrock JSON UI desde cero.
 
-Empieza aqui:
+Si estás empezando, lee las páginas en este orden:
 
-1. [Que Es JSON UI?](./guide/what-is-json-ui.md)
-2. [Flujo Del Resource Pack](./guide/resource-pack-flow.md)
-3. [Primer Archivo UI](./guide/first-ui-file.md)
-4. [Server Forms](./server-forms/index.md)
+1. [¿Qué es JSON UI?](./guide/what-is-json-ui.md)
+2. [Flujo del resource pack](./guide/resource-pack-flow.md)
+3. [Primer archivo UI](./guide/first-ui-file.md)
+4. [Resumen de formularios del servidor](./server-forms/index.md)
 
-JSON UI no es una interfaz web. Es un sistema del cliente Bedrock que lee archivos JSON dentro de un resource pack y crea pantallas con arboles de controles.
+JSON UI no es una interfaz web. Es un sistema del cliente Bedrock: el juego lee archivos JSON dentro de un resource pack y construye la pantalla a partir de un árbol de controles.
 
-Si haces servidores con PMMP o scripts de behavior pack, empieza por los server forms. Muchos menus personalizados entran por `server_form.json`, y desde ahi la UI puede leer titulo, texto, botones y campos enviados por el servidor.
+Si desarrollas servidores con PMMP o scripts de behavior pack, empieza por `server_form.json`. La mayoría de menús personalizados entran a JSON UI por esa pantalla y después enlazan título, texto, botones y campos del formulario con tu propio layout.
 
 <img class="jsonui-diagram" src="/assets/diagrams/load-flow.svg" alt="Flujo de carga de JSON UI">

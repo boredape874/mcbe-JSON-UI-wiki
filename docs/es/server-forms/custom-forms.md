@@ -1,24 +1,24 @@
-# Custom Forms
+# Custom forms
 
-Los custom forms contienen campos: text input, toggle, slider, dropdown, step slider y labels.
+Los custom forms contienen campos: input de texto, toggle, slider, dropdown, step slider y labels.
 
-En JSON UI entran por el control id `custom_form`. Por eso normalmente se disenan separado de los action forms.
+En JSON UI, los custom forms se enrutan mediante el control id `custom_form`. Por eso un diseño de custom form normalmente usa un layout distinto al de un action form.
 
-## Cuando Usarlos
+## Cuándo usar custom forms
 
-Usa custom form cuando el jugador debe enviar valores:
+Usa un custom form cuando el jugador debe enviar valores:
 
-- codigo de admin
-- toggles de configuracion
-- cantidad numerica
-- dropdown de region o sector
-- confirmacion con varios campos
+- input de código de administrador
+- toggles de ajustes
+- selección de cantidad numérica
+- dropdown de región o sector
+- confirmación con varios campos
 
-Si el jugador solo elige un boton, usa action form.
+Usa un action form cuando el jugador solo debe elegir un botón.
 
-## Text Input
+## Notas sobre input de texto
 
-Los inputs suelen basarse en `common.text_edit_box`.
+Los cuadros de texto suelen venir de `common.text_edit_box`. Mantén el área de input suficientemente grande y usa un placeholder claro. En el lado del servidor, vuelve a validar siempre el texto enviado.
 
 ```json
 {
@@ -31,14 +31,14 @@ Los inputs suelen basarse en `common.text_edit_box`.
 }
 ```
 
-## Orden De Campos
+## Contrato de UI
 
-El servidor recibe resultados por orden de campo.
+El servidor recibe los resultados del custom form por orden de campos. Si reordenas campos en el script del servidor, también cambia el significado de la UI. Documenta el orden:
 
 ```text
-field 0: codigo de admin
-field 1: execute-to sector dropdown
-field 2: execute-from void dropdown
+field 0: texto del código de administrador
+field 1: dropdown de sector de destino
+field 2: dropdown de origen void
 ```
 
-PMMP y Script API necesitan el mismo orden en codigo y documentacion.
+Esto es especialmente importante en plugins PMMP y formularios de la beta Script API, porque ambos lados deben mantener el mismo orden de resultados.

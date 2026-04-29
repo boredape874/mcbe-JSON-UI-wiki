@@ -15,7 +15,7 @@ hero:
       text: 한국어로 시작
       link: /ko/guide/what-is-json-ui
     - theme: alt
-      text: Empezar en Español
+      text: Empezar en español
       link: /es/guide/what-is-json-ui
 features:
   - title: Beginner-first

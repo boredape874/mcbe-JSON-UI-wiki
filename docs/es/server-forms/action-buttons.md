@@ -1,17 +1,19 @@
-# Botones De Action Form
+# Botones de action form
 
-Los action forms renderizan una coleccion llamada `form_buttons`. Cada item es un boton del servidor.
+Los action forms renderizan una colección llamada `form_buttons`. Cada item de esa colección es un botón enviado por el servidor.
 
-Flujo normal:
+La ruta normal de renderizado es:
 
 ```text
-coleccion form_buttons
+colección form_buttons
         -> grid o stack panel
-        -> un template de boton por item
+        -> un template de botón por item
         -> #form_button_text y #form_button_texture dentro del template
 ```
 
-## Grid De Botones
+## Grid de botones
+
+Usa un grid cuando el formulario sea un menú:
 
 ```json
 {
@@ -26,15 +28,18 @@ coleccion form_buttons
 }
 ```
 
-## Template De Boton
+## Template de botón
 
-Mantén la conexion con `button.form_button_click`.
+El template debe mantener el click conectado a `button.form_button_click`.
 
 ```json
 {
   "menu_button": {
     "type": "button",
     "size": [190, 110],
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -52,8 +57,8 @@ Mantén la conexion con `button.form_button_click`.
 }
 ```
 
-Si el boton se ve presionado pero el servidor no recibe respuesta, revisa primero `button.form_button_click`.
+Si el botón se ve presionado pero el servidor no recibe respuesta, revisa primero el mapping hacia `button.form_button_click`.
 
-## Botones Bloqueados
+## Botones bloqueados
 
-Para nodos de skill o items bloqueados, muestra un candado en JSON UI, pero valida tambien en el servidor. JSON UI no debe ser la unica autoridad del estado de desbloqueo.
+Para nodos de skills o items de tienda bloqueados, mantén estable el índice real del botón. Renderiza un overlay de candado y bloquea la acción visual solo si el servidor también rechaza el click. JSON UI no debe ser la única autoridad sobre el estado de desbloqueo.

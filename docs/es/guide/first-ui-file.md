@@ -1,10 +1,10 @@
-# Primer Archivo UI
+# Primer archivo UI
 
-El ejemplo mas simple es poner un label en el centro del HUD.
+Esta página muestra el patrón práctico más pequeño de JSON UI: una pantalla con un label centrado.
 
 ## 1. Registrar el archivo
 
-`ui/_ui_defs.json`:
+Crea `ui/_ui_defs.json`:
 
 ```json
 {
@@ -16,7 +16,7 @@ El ejemplo mas simple es poner un label en el centro del HUD.
 
 ## 2. Modificar una pantalla
 
-`ui/hud_screen.json`:
+Crea `ui/hud_screen.json`:
 
 ```json
 {
@@ -34,4 +34,14 @@ El ejemplo mas simple es poner un label en el centro del HUD.
 }
 ```
 
-Si no aparece, revisa `_ui_defs.json`, namespace y cache del resource pack.
+Este tipo de clave basada en ruta modifica una ruta de controles que ya existe. La ruta exacta depende de la pantalla que estés editando.
+
+## 3. Recargar el pack
+
+Aplica el RP en un mundo. Si cambias archivos y nada se actualiza, Minecraft puede estar usando una copia en caché. Sube la versión del resource pack en `manifest.json` o vuelve a aplicar el pack.
+
+## Por qué esto no sirve para todas las pantallas
+
+Cada pantalla tiene rutas de control distintas. HUD, chat, inventario y server forms no usan los mismos puntos de inserción.
+
+La primera habilidad en JSON UI es saber qué pantalla estás editando.

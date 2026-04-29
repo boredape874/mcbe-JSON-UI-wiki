@@ -1,8 +1,8 @@
-# Que Es JSON UI?
+# ¿Qué es JSON UI?
 
-Minecraft Bedrock JSON UI es el sistema que usa un resource pack para describir pantallas, paneles, labels, imagenes, botones, formularios y HUD.
+Minecraft Bedrock JSON UI es el sistema de interfaz del cliente que usan los resource packs para describir pantallas, paneles, labels, imágenes, botones, formularios, widgets del HUD y otras piezas de UI.
 
-Se llama JSON UI porque la estructura se escribe como objetos JSON.
+Se llama JSON UI porque la mayor parte de la interfaz se escribe como objetos JSON.
 
 ```json
 {
@@ -14,23 +14,50 @@ Se llama JSON UI porque la estructura se escribe como objetos JSON.
 }
 ```
 
+Ese objeto pequeño significa: crea un label, ponle texto, dale un tamaño y ánclalo al centro.
+
 ## Idea principal
 
-JSON UI es un arbol de controles.
+JSON UI es un árbol de controles.
 
-<img class="jsonui-diagram" src="/assets/diagrams/control-tree.svg" alt="Arbol de controles JSON UI">
+<img class="jsonui-diagram" src="/assets/diagrams/control-tree.svg" alt="Árbol de controles de JSON UI">
 
-Una pantalla contiene controles. Un control puede contener mas controles.
+Una pantalla contiene controles. Esos controles pueden contener otros controles. Por ejemplo:
 
-## Que puede cambiar
+- un panel de pantalla contiene una imagen de fondo
+- el mismo panel contiene un botón
+- el botón contiene un label de texto
+- el botón puede cambiar sus controles hijos cuando está en hover o pressed
 
-- HUD
-- chat
+## Qué puede cambiar JSON UI
+
+JSON UI puede personalizar muchas interfaces del cliente Bedrock:
+
+- overlays del HUD
+- paneles de chat
 - title y actionbar
-- server forms
-- pantallas parecidas a inventario
-- capas visuales controladas por datos del juego
+- formularios del servidor
+- pantallas parecidas al inventario
+- partes de la pantalla de inicio y pausa
+- capas visuales controladas por scoreboards, titles o formularios
 
-## Que no hace solo
+## Qué no puede hacer JSON UI por sí solo
 
-JSON UI no ejecuta logica de juego. Para comandos, datos de jugador o reglas del servidor usa un servidor, BP Script o un plugin PMMP.
+JSON UI no es un lenguaje de scripting.
+
+No puede hacer directamente:
+
+- ejecutar comandos del servidor
+- guardar datos del jugador
+- detectar eventos de bloques
+- crear lógica de gameplay
+
+Para la lógica de gameplay usa un servidor, un script de behavior pack o un plugin PMMP. JSON UI se encarga de la presentación en el cliente.
+
+## Regla para principiantes
+
+Piensa en JSON UI como:
+
+> Archivos del resource pack que le dicen al cliente Bedrock cómo debe verse una pantalla y cómo debe reaccionar a datos de UI ya existentes.
+
+Ese modelo evita la mayor parte de la confusión inicial.

@@ -1,34 +1,34 @@
-# Resumen De Server Forms
+# Resumen de formularios del servidor
 
-Los server forms son la entrada mas practica para trabajar JSON UI desde un servidor. Un plugin PMMP, un script de behavior pack o un sistema de comandos abre un form. Bedrock lo renderiza con la pantalla `server_form` del resource pack.
+Los formularios del servidor son el punto de entrada más práctico para trabajar JSON UI desde código de servidor. Un plugin PMMP, un script de behavior pack o un sistema de comandos abre un formulario. Después, Bedrock lo renderiza mediante la pantalla `server_form` del resource pack.
 
-Modelo basico:
+La idea principal es simple:
 
 <img class="jsonui-diagram" src="/assets/diagrams/server-form-flow.svg" alt="Flujo de server form">
 
 ```text
-el servidor abre un form
-        -> Bedrock recibe titulo, texto, botones o campos
+el código del servidor crea un formulario
+        -> Bedrock recibe título, texto, botones o campos
         -> RP/ui/server_form.json decide el layout visual
-        -> el jugador hace click o envia el form
-        -> el resultado vuelve al servidor
+        -> el jugador hace click o envía el formulario
+        -> el resultado vuelve al código del servidor
 ```
 
-## Datos Que JSON UI Puede Leer
+## Qué puede leer JSON UI
 
-En action forms normalmente se usan:
+En action forms normales, la UI suele leer:
 
-- `#title_text`: titulo enviado por el servidor
-- `#form_text`: texto principal
-- `form_buttons`: coleccion de botones
-- `#form_button_text`: texto de un boton
-- `#form_button_texture`: textura del boton si el servidor envio imagen
+- `#title_text`: el título enviado por el servidor
+- `#form_text`: el cuerpo de texto enviado por el servidor
+- `form_buttons`: la colección de botones
+- `#form_button_text`: el texto de un botón al renderizar un item de la colección
+- `#form_button_texture`: la ruta de imagen de un botón cuando el servidor envió una imagen
 
-En custom forms se usa la ruta `custom_form`, con inputs, toggles, sliders, dropdowns o labels.
+En custom forms, la UI usa la ruta `custom_form` y renderiza inputs, toggles, sliders, dropdowns o labels según el contenido del formulario.
 
-## Estructura Recomendada
+## Estructura recomendada
 
-Mantén `server_form.json` pequeno. Usalo como router, no como todo el diseno.
+Mantén pequeño `server_form.json`. Trátalo como router, no como el diseño completo.
 
 ```text
 RP/
@@ -45,16 +45,22 @@ RP/
         templates.json
 ```
 
-Un pack real crece rapido. Shop, admin panel, skill tree, image form y settings no deben vivir todos en un solo `server_form.json`.
+Esta estructura importa porque los formularios crecen rápido. Una tienda, un panel de administración, un árbol de skills, un image form y un formulario de ajustes no deberían vivir dentro de un único `server_form.json` gigante.
 
-## Contrato Con El Servidor
+## Contrato con el servidor
 
-El RP y el servidor deben compartir una regla estable:
+El RP y el servidor deben acordar cómo se selecciona una UI personalizada. Contratos comunes:
 
-- prefijo en el titulo: `[shop] Main Menu`
+- prefijo en el título: `[shop] Main Menu`
 - token oculto: `§0shop_menu`
-- tipo de form: action form o custom form
-- orden de botones: indice `0`, `1`, `2`
-- payload: texto o body con marcadores que JSON UI puede leer
+- tipo de formulario: action form o custom form
+- orden de botones: el índice `0`, `1`, `2` se asigna a acciones del servidor
+- texto de payload: el texto del botón o del cuerpo contiene un marcador que JSON UI parsea
 
-Define este contrato antes de disenar. Muchos errores de server forms son fallos de contrato, no fallos visuales.
+Escribe este contrato antes de construir la UI. La mayoría de server forms rotos no fallan por layout, sino por un contrato inconsistente entre servidor y resource pack.
+
+## Páginas siguientes
+
+1. [Enrutamiento](./routing.md)
+2. [Botones de acción](./action-buttons.md)
+3. [Custom forms](./custom-forms.md)

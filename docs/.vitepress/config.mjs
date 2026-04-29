@@ -1,11 +1,25 @@
 import { defineConfig } from "vitepress";
 
-const sharedNav = (prefix) => [
-  { text: "Start", link: `${prefix}/guide/what-is-json-ui` },
-  { text: "Server Forms", link: `${prefix}/server-forms/` },
-  { text: "Reference", link: `${prefix}/reference/file-roles` },
-  { text: "Patterns", link: `${prefix}/patterns/server-forms` }
-];
+const sharedNav = {
+  en: [
+    { text: "Start", link: "/en/guide/what-is-json-ui" },
+    { text: "Server Forms", link: "/en/server-forms/" },
+    { text: "Reference", link: "/en/reference/file-roles" },
+    { text: "Patterns", link: "/en/patterns/server-forms" }
+  ],
+  ko: [
+    { text: "시작하기", link: "/ko/guide/what-is-json-ui" },
+    { text: "서버폼", link: "/ko/server-forms/" },
+    { text: "레퍼런스", link: "/ko/reference/file-roles" },
+    { text: "패턴", link: "/ko/patterns/server-forms" }
+  ],
+  es: [
+    { text: "Inicio", link: "/es/guide/what-is-json-ui" },
+    { text: "Formularios", link: "/es/server-forms/" },
+    { text: "Referencia", link: "/es/reference/file-roles" },
+    { text: "Patrones", link: "/es/patterns/server-forms" }
+  ]
+};
 
 const sidebars = {
   en: [
@@ -80,36 +94,36 @@ const sidebars = {
   ],
   es: [
     {
-      text: "Guia Inicial",
+      text: "Guía inicial",
       items: [
-        { text: "Que Es JSON UI?", link: "/es/guide/what-is-json-ui" },
-        { text: "Flujo Del Pack", link: "/es/guide/resource-pack-flow" },
-        { text: "Primer Archivo UI", link: "/es/guide/first-ui-file" },
-        { text: "Layout Basico", link: "/es/guide/layout-basics" },
+        { text: "¿Qué es JSON UI?", link: "/es/guide/what-is-json-ui" },
+        { text: "Flujo del resource pack", link: "/es/guide/resource-pack-flow" },
+        { text: "Primer archivo UI", link: "/es/guide/first-ui-file" },
+        { text: "Bases de layout", link: "/es/guide/layout-basics" },
         { text: "Bindings", link: "/es/guide/bindings" }
       ]
     },
     {
-      text: "Server Forms",
+      text: "Formularios del servidor",
       items: [
         { text: "Resumen", link: "/es/server-forms/" },
-        { text: "Rutas", link: "/es/server-forms/routing" },
-        { text: "Botones De Accion", link: "/es/server-forms/action-buttons" },
-        { text: "Custom Forms", link: "/es/server-forms/custom-forms" }
+        { text: "Enrutamiento", link: "/es/server-forms/routing" },
+        { text: "Botones de acción", link: "/es/server-forms/action-buttons" },
+        { text: "Custom forms", link: "/es/server-forms/custom-forms" }
       ]
     },
     {
       text: "Referencia",
       items: [
-        { text: "Roles De Archivos", link: "/es/reference/file-roles" },
-        { text: "Solucion De Errores", link: "/es/reference/troubleshooting" }
+        { text: "Rol de cada archivo", link: "/es/reference/file-roles" },
+        { text: "Solución de problemas", link: "/es/reference/troubleshooting" }
       ]
     },
     {
       text: "Patrones",
       items: [
-        { text: "Patrones De Server Form", link: "/es/patterns/server-forms" },
-        { text: "HUD Y Chat", link: "/es/patterns/hud-chat" }
+        { text: "Patrones de server form", link: "/es/patterns/server-forms" },
+        { text: "HUD y chat", link: "/es/patterns/hud-chat" }
       ]
     }
   ]
@@ -136,7 +150,7 @@ export default defineConfig({
       lang: "en-US",
       link: "/en/",
       themeConfig: {
-        nav: sharedNav("/en"),
+        nav: sharedNav.en,
         sidebar: sidebars.en
       }
     },
@@ -145,24 +159,24 @@ export default defineConfig({
       lang: "ko-KR",
       link: "/ko/",
       title: "MCBE JSON UI 위키",
-      description: "마인크래프트 베드락 JSON UI를 처음부터 배우는 위키",
+      description: "마인크래프트 베드락 JSON UI를 기초부터 배우는 위키",
       themeConfig: {
-        nav: sharedNav("/ko"),
+        nav: sharedNav.ko,
         sidebar: sidebars.ko,
         outline: { label: "이 페이지" },
         docFooter: { prev: "이전", next: "다음" }
       }
     },
     es: {
-      label: "Espanol",
+      label: "Español",
       lang: "es-ES",
       link: "/es/",
-      title: "Wiki MCBE JSON UI",
-      description: "Wiki para aprender Minecraft Bedrock JSON UI desde cero",
+      title: "Wiki de MCBE JSON UI",
+      description: "Una wiki para aprender Minecraft Bedrock JSON UI desde cero",
       themeConfig: {
-        nav: sharedNav("/es"),
+        nav: sharedNav.es,
         sidebar: sidebars.es,
-        outline: { label: "En esta pagina" },
+        outline: { label: "En esta página" },
         docFooter: { prev: "Anterior", next: "Siguiente" }
       }
     }

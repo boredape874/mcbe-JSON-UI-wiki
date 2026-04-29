@@ -1,20 +1,24 @@
-# HUD Y Chat
+# HUD y chat
 
-HUD y chat se usan para overlays y mensajes visuales.
+La UI del HUD y del chat se usa a menudo para overlays en tiempo real.
 
 ## HUD
 
-Bueno para informacion persistente:
+Usa modificaciones del HUD cuando quieras mostrar información persistente:
 
 - barras de vida
-- mana
-- quests
-- paneles tipo scoreboard
+- barras de maná
+- seguimiento de misiones
+- overlays con estilo de scoreboard
 
 ## Chat
 
-El chat puede ocultar mensajes especiales o convertir textos marcados en paneles visuales.
+La UI del chat puede usarse para mostrar u ocultar mensajes especiales. Algunos packs usan marcadores de texto ocultos como un protocolo ligero.
 
 ## Title y actionbar
 
-Muchos servidores envian texto estructurado por title/actionbar. JSON UI puede leer partes con bindings y mostrarlas como UI personalizada.
+Muchos servidores envían texto estructurado por title o actionbar. JSON UI puede parsear partes de ese texto con bindings y mostrarlas en paneles personalizados.
+
+## Advertencia
+
+No abuses de protocolos basados en chat o actionbar para datos que necesiten mucha fiabilidad. Para sistemas complejos, combina JSON UI con validación del lado del servidor.

@@ -1,15 +1,15 @@
-# Rutas De Server Form
+# Enrutamiento de server forms
 
-Routing significa elegir que UI personalizada debe mostrar un server form.
+Enrutar significa elegir qué UI personalizada debe renderizar un formulario del servidor.
 
-Patron recomendado:
+El patrón más seguro es:
 
-1. `third_party_server_screen` carga `server_form.main_screen_content`.
-2. `server_form.json` contiene un router pequeno.
-3. La UI real vive en `ui/forms/<feature>/index.json`.
-4. El servidor mantiene una regla de titulo estable.
+1. Deja que `third_party_server_screen` cargue `server_form.main_screen_content`.
+2. Coloca un router pequeño en `server_form.json`.
+3. Usa factories o paneles condicionales para enviar formularios concretos a `ui/forms/<feature>/index.json`.
+4. Mantén estable la convención del título en el lado del servidor.
 
-## Entrada Minima
+## Entrada mínima
 
 ```json
 {
@@ -18,15 +18,30 @@ Patron recomendado:
     "$screen_content": "server_form.main_screen_content",
     "$screen_bg_content": "common.screen_background",
     "render_game_behind": true
+  },
+  "main_screen_content": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "form_factory": {
+          "type": "factory",
+          "control_ids": {
+            "long_form": "@server_form.long_form_router",
+            "custom_form": "@server_form.custom_form_router"
+          }
+        }
+      }
+    ]
   }
 }
 ```
 
-`long_form` suele manejar action forms. `custom_form` maneja forms con campos.
+`long_form` maneja action forms normales. `custom_form` maneja formularios con campos.
 
-## Contrato Por Titulo
+## Contrato por prefijo de título
 
-Ejemplo:
+Un contrato común del lado del servidor es usar un prefijo en el título:
 
 ```text
 [shop] Shop Menu
@@ -34,11 +49,11 @@ Ejemplo:
 [traits] Trait Tree
 ```
 
-JSON UI puede leer `#title_text` y mostrar solo el panel correcto. El titulo visible puede ser otro label limpio.
+JSON UI puede enlazar `#title_text`, revisar el marcador y mostrar solo el panel correspondiente. El título visible puede limpiarse ocultando o reemplazando el label original.
 
-## Regla Practica
+## Regla práctica
 
-Una ruta por feature:
+Usa una ruta por cada feature real:
 
 ```text
 server_form.json
@@ -46,3 +61,5 @@ server_form.json
   -> forms/admin_console/index.json
   -> forms/trait_tree/index.json
 ```
+
+Evita colocar todos los controles directamente bajo `server_form.json`. Ese archivo debería responder "¿qué formulario es este?", no "¿cómo se ve cada formulario?".

@@ -1,6 +1,6 @@
 # Bindings
 
-Los bindings copian o transforman datos hacia propiedades de controles.
+Los bindings copian o transforman datos de UI y los colocan en propiedades de controles.
 
 <img class="jsonui-diagram" src="/assets/diagrams/binding-flow.svg" alt="Flujo de bindings">
 
@@ -18,9 +18,11 @@ Los bindings copian o transforman datos hacia propiedades de controles.
 }
 ```
 
-## Binding de coleccion
+Esto significa: lee `#title_text` y úsalo en este control.
 
-Los botones de server form usan `form_buttons`.
+## Binding de colección
+
+Los botones de server form usan la colección `form_buttons`.
 
 ```json
 {
@@ -30,7 +32,11 @@ Los botones de server form usan `form_buttons`.
 }
 ```
 
+Esto permite que un template de botón lea el texto del botón actual del formulario.
+
 ## View binding
+
+Un view binding puede calcular una propiedad:
 
 ```json
 {
@@ -40,4 +46,8 @@ Los botones de server form usan `form_buttons`.
 }
 ```
 
-Usa expresiones simples y prueba dentro del juego.
+Esta es la base de muchos trucos dinámicos de JSON UI.
+
+## Advertencia importante
+
+Los bindings son potentes, pero no son JavaScript completo. Usa expresiones simples y pruébalas dentro del juego.
