@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img" aria-labelledby="title desc">
+  <title id="title">Animation event flow</title>
+  <desc id="desc">A user press emits a button event, a stable wrapper receives play_event, and resettable animations can replay.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="920" height="300" rx="18" fill="url(#bg)"/>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="58" y="92" width="180" height="96" rx="14" fill="#1f2937" stroke="#475569"/>
+    <text x="148" y="127" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">Button Press</text>
+    <text x="148" y="154" fill="#cbd5e1" font-size="13" text-anchor="middle">button.menu_select</text>
+    <rect x="324" y="92" width="244" height="96" rx="14" fill="#1f2937" stroke="#475569"/>
+    <text x="446" y="124" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">Custom Event</text>
+    <text x="446" y="151" fill="#cbd5e1" font-size="13" text-anchor="middle">button.feature.play</text>
+    <text x="446" y="172" fill="#94a3b8" font-size="12" text-anchor="middle">mapping_type: pressed</text>
+    <rect x="650" y="92" width="212" height="96" rx="14" fill="#1f2937" stroke="#475569"/>
+    <text x="756" y="124" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">Stable Wrapper</text>
+    <text x="756" y="151" fill="#cbd5e1" font-size="13" text-anchor="middle">play_event + resettable</text>
+    <text x="756" y="172" fill="#94a3b8" font-size="12" text-anchor="middle">replays animation</text>
+  </g>
+  <g stroke="url(#a)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M238 140 H324"/>
+    <path d="M568 140 H650"/>
+  </g>
+  <g fill="url(#a)">
+    <path d="M324 140 l-12 -7 v14 z"/>
+    <path d="M650 140 l-12 -7 v14 z"/>
+  </g>
+</svg>

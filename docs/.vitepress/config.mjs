@@ -5,19 +5,19 @@ const sharedNav = {
     { text: "Start", link: "/en/guide/what-is-json-ui" },
     { text: "Server Forms", link: "/en/server-forms/" },
     { text: "Reference", link: "/en/reference/file-roles" },
-    { text: "Patterns", link: "/en/patterns/server-forms" }
+    { text: "Patterns", link: "/en/patterns/" }
   ],
   ko: [
     { text: "시작하기", link: "/ko/guide/what-is-json-ui" },
     { text: "서버폼", link: "/ko/server-forms/" },
     { text: "레퍼런스", link: "/ko/reference/file-roles" },
-    { text: "패턴", link: "/ko/patterns/server-forms" }
+    { text: "패턴", link: "/ko/patterns/" }
   ],
   es: [
     { text: "Inicio", link: "/es/guide/what-is-json-ui" },
     { text: "Formularios", link: "/es/server-forms/" },
     { text: "Referencia", link: "/es/reference/file-roles" },
-    { text: "Patrones", link: "/es/patterns/server-forms" }
+    { text: "Patrones", link: "/es/patterns/" }
   ]
 };
 
@@ -56,8 +56,14 @@ const sidebars = {
     {
       text: "Patterns",
       items: [
+        { text: "Pattern Compendium", link: "/en/patterns/" },
         { text: "Server Form Patterns", link: "/en/patterns/server-forms" },
-        { text: "HUD And Chat", link: "/en/patterns/hud-chat" }
+        { text: "HUD And Chat", link: "/en/patterns/hud-chat" },
+        { text: "Custom Toggles", link: "/en/patterns/custom-toggles" },
+        { text: "Animation Events", link: "/en/patterns/animation-events" },
+        { text: "Progress Bars", link: "/en/patterns/progress-bars" },
+        { text: "Carousels", link: "/en/patterns/carousels" },
+        { text: "Text Payloads", link: "/en/patterns/text-payloads" }
       ]
     }
   ],
@@ -95,8 +101,14 @@ const sidebars = {
     {
       text: "패턴",
       items: [
+        { text: "패턴 집약", link: "/ko/patterns/" },
         { text: "서버폼 패턴", link: "/ko/patterns/server-forms" },
-        { text: "HUD와 채팅", link: "/ko/patterns/hud-chat" }
+        { text: "HUD와 채팅", link: "/ko/patterns/hud-chat" },
+        { text: "커스텀 토글", link: "/ko/patterns/custom-toggles" },
+        { text: "애니메이션 이벤트", link: "/ko/patterns/animation-events" },
+        { text: "프로그레스바", link: "/ko/patterns/progress-bars" },
+        { text: "캐러셀", link: "/ko/patterns/carousels" },
+        { text: "텍스트 페이로드", link: "/ko/patterns/text-payloads" }
       ]
     }
   ],
@@ -134,8 +146,14 @@ const sidebars = {
     {
       text: "Patrones",
       items: [
+        { text: "Compendio de patrones", link: "/es/patterns/" },
         { text: "Patrones de server form", link: "/es/patterns/server-forms" },
-        { text: "HUD y chat", link: "/es/patterns/hud-chat" }
+        { text: "HUD y chat", link: "/es/patterns/hud-chat" },
+        { text: "Toggles personalizados", link: "/es/patterns/custom-toggles" },
+        { text: "Eventos de animación", link: "/es/patterns/animation-events" },
+        { text: "Barras de progreso", link: "/es/patterns/progress-bars" },
+        { text: "Carruseles", link: "/es/patterns/carousels" },
+        { text: "Payloads de texto", link: "/es/patterns/text-payloads" }
       ]
     }
   ]
