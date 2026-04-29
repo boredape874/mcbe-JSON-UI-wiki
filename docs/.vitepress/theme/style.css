@@ -1,0 +1,31 @@
+:root {
+  --vp-c-brand-1: #3ba55d;
+  --vp-c-brand-2: #2f8f50;
+  --vp-c-brand-3: #236b3b;
+  --vp-c-bg-soft: #f3f6f2;
+}
+
+.dark {
+  --vp-c-brand-1: #72d572;
+  --vp-c-brand-2: #55b85a;
+  --vp-c-brand-3: #3b8f42;
+}
+
+.VPHomeHero .image img {
+  image-rendering: pixelated;
+}
+
+.jsonui-diagram {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  padding: 12px;
+}
+
+.lesson-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--vp-c-bg-soft);
+  margin: 16px 0;
+}

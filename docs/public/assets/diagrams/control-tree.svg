@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style>
+    text{font-family:Arial,sans-serif;font-size:17px;fill:#111}
+    .node{fill:#f6f8fa;stroke:#222;stroke-width:2;rx:8}
+    .root{fill:#dff6e4}
+    .leaf{fill:#e2efff}
+    .line{stroke:#333;stroke-width:2}
+    .code{font-family:Consolas,monospace;font-size:14px;fill:#333}
+  </style>
+  <rect class="node root" x="360" y="24" width="180" height="58"/>
+  <text x="450" y="58" text-anchor="middle">screen panel</text>
+  <line class="line" x1="450" y1="82" x2="210" y2="136"/>
+  <line class="line" x1="450" y1="82" x2="450" y2="136"/>
+  <line class="line" x1="450" y1="82" x2="690" y2="136"/>
+  <rect class="node" x="120" y="136" width="180" height="58"/>
+  <text x="210" y="170" text-anchor="middle">background image</text>
+  <rect class="node" x="360" y="136" width="180" height="58"/>
+  <text x="450" y="170" text-anchor="middle">content panel</text>
+  <rect class="node" x="600" y="136" width="180" height="58"/>
+  <text x="690" y="170" text-anchor="middle">button</text>
+  <line class="line" x1="450" y1="194" x2="330" y2="250"/>
+  <line class="line" x1="450" y1="194" x2="570" y2="250"/>
+  <rect class="node leaf" x="240" y="250" width="180" height="58"/>
+  <text x="330" y="284" text-anchor="middle">label</text>
+  <rect class="node leaf" x="480" y="250" width="180" height="58"/>
+  <text x="570" y="284" text-anchor="middle">icon image</text>
+  <text class="code" x="28" y="334">JSON UI is a tree: parent controls own child controls.</text>
+</svg>
