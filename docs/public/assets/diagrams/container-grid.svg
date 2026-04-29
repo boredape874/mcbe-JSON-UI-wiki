@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="320" viewBox="0 0 920 320" role="img" aria-labelledby="title desc">
+  <title id="title">Container grid layout</title>
+  <desc id="desc">A custom container UI separates shell, inventory grid, detail panel, and action buttons.</desc>
+  <rect width="920" height="320" rx="18" fill="#111827"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="92" y="54" width="736" height="226" rx="16" fill="#1f2937" stroke="#475569" stroke-width="3"/>
+    <rect x="122" y="84" width="386" height="166" rx="10" fill="#0f172a" stroke="#334155"/>
+    <g fill="#263244" stroke="#64748b">
+      <rect x="146" y="108" width="44" height="44" rx="6"/><rect x="200" y="108" width="44" height="44" rx="6"/><rect x="254" y="108" width="44" height="44" rx="6"/><rect x="308" y="108" width="44" height="44" rx="6"/><rect x="362" y="108" width="44" height="44" rx="6"/><rect x="416" y="108" width="44" height="44" rx="6"/>
+      <rect x="146" y="162" width="44" height="44" rx="6"/><rect x="200" y="162" width="44" height="44" rx="6"/><rect x="254" y="162" width="44" height="44" rx="6"/><rect x="308" y="162" width="44" height="44" rx="6"/><rect x="362" y="162" width="44" height="44" rx="6"/><rect x="416" y="162" width="44" height="44" rx="6"/>
+    </g>
+    <rect x="548" y="84" width="248" height="104" rx="10" fill="#0f172a" stroke="#334155"/>
+    <rect x="548" y="206" width="112" height="44" rx="8" fill="#334155"/>
+    <rect x="684" y="206" width="112" height="44" rx="8" fill="#334155"/>
+    <text x="315" y="276" fill="#cbd5e1" font-size="14" text-anchor="middle">grid / collection / item slots</text>
+    <text x="672" y="146" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">detail panel</text>
+    <text x="604" y="234" fill="#f8fafc" font-size="13" text-anchor="middle">action</text>
+    <text x="740" y="234" fill="#f8fafc" font-size="13" text-anchor="middle">close</text>
+  </g>
+</svg>

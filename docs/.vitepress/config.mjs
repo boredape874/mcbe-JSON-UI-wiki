@@ -63,7 +63,17 @@ const sidebars = {
         { text: "Animation Events", link: "/en/patterns/animation-events" },
         { text: "Progress Bars", link: "/en/patterns/progress-bars" },
         { text: "Carousels", link: "/en/patterns/carousels" },
-        { text: "Text Payloads", link: "/en/patterns/text-payloads" }
+        { text: "Text Payloads", link: "/en/patterns/text-payloads" },
+        { text: "Scoreboards", link: "/en/patterns/scoreboards" },
+        { text: "Containers", link: "/en/patterns/containers" },
+        { text: "Protocol HUD", link: "/en/patterns/protocol-hud" },
+        { text: "Chat Panels", link: "/en/patterns/chat-panels" },
+        { text: "Start Screens", link: "/en/patterns/start-screens" },
+        { text: "Hotbar Layouts", link: "/en/patterns/hotbar-layouts" },
+        { text: "Tooltips", link: "/en/patterns/tooltips" },
+        { text: "Special Form Suites", link: "/en/patterns/special-form-suites" },
+        { text: "Small Controls", link: "/en/patterns/small-controls" },
+        { text: "Visual Shells", link: "/en/patterns/visual-shells" }
       ]
     }
   ],
@@ -108,7 +118,17 @@ const sidebars = {
         { text: "애니메이션 이벤트", link: "/ko/patterns/animation-events" },
         { text: "프로그레스바", link: "/ko/patterns/progress-bars" },
         { text: "캐러셀", link: "/ko/patterns/carousels" },
-        { text: "텍스트 페이로드", link: "/ko/patterns/text-payloads" }
+        { text: "텍스트 페이로드", link: "/ko/patterns/text-payloads" },
+        { text: "스코어보드", link: "/ko/patterns/scoreboards" },
+        { text: "컨테이너", link: "/ko/patterns/containers" },
+        { text: "프로토콜 HUD", link: "/ko/patterns/protocol-hud" },
+        { text: "채팅 패널", link: "/ko/patterns/chat-panels" },
+        { text: "시작 화면", link: "/ko/patterns/start-screens" },
+        { text: "핫바 레이아웃", link: "/ko/patterns/hotbar-layouts" },
+        { text: "툴팁", link: "/ko/patterns/tooltips" },
+        { text: "특수 폼 묶음", link: "/ko/patterns/special-form-suites" },
+        { text: "소형 컨트롤", link: "/ko/patterns/small-controls" },
+        { text: "시각 셸", link: "/ko/patterns/visual-shells" }
       ]
     }
   ],
@@ -153,7 +173,17 @@ const sidebars = {
         { text: "Eventos de animación", link: "/es/patterns/animation-events" },
         { text: "Barras de progreso", link: "/es/patterns/progress-bars" },
         { text: "Carruseles", link: "/es/patterns/carousels" },
-        { text: "Payloads de texto", link: "/es/patterns/text-payloads" }
+        { text: "Payloads de texto", link: "/es/patterns/text-payloads" },
+        { text: "Scoreboards", link: "/es/patterns/scoreboards" },
+        { text: "Contenedores", link: "/es/patterns/containers" },
+        { text: "HUD por protocolo", link: "/es/patterns/protocol-hud" },
+        { text: "Paneles de chat", link: "/es/patterns/chat-panels" },
+        { text: "Pantallas de inicio", link: "/es/patterns/start-screens" },
+        { text: "Layouts de hotbar", link: "/es/patterns/hotbar-layouts" },
+        { text: "Tooltips", link: "/es/patterns/tooltips" },
+        { text: "Suites de forms especiales", link: "/es/patterns/special-form-suites" },
+        { text: "Controles pequeños", link: "/es/patterns/small-controls" },
+        { text: "Shells visuales", link: "/es/patterns/visual-shells" }
       ]
     }
   ]
