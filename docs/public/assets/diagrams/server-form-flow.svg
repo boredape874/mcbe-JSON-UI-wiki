@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img" aria-labelledby="title desc">
+  <title id="title">Server form flow</title>
+  <desc id="desc">Server code opens a form, Bedrock routes it through server_form.json, the player interacts, and the result returns to the server.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#171923"/>
+      <stop offset="1" stop-color="#10131a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="920" height="300" rx="18" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round">
+    <path d="M236 114 H326"/>
+    <path d="M594 114 H684"/>
+    <path d="M775 172 C690 252 246 252 155 172"/>
+  </g>
+  <g fill="url(#accent)">
+    <path d="M326 114 l-12 -7 v14 z"/>
+    <path d="M684 114 l-12 -7 v14 z"/>
+    <path d="M155 172 l4 13 9 -10 z"/>
+  </g>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="42" y="62" width="194" height="110" rx="12" fill="#202637" stroke="#3f4a66"/>
+    <text x="139" y="100" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="middle">Server Code</text>
+    <text x="139" y="130" fill="#cbd5e1" font-size="14" text-anchor="middle">PMMP / Script API</text>
+    <text x="139" y="152" fill="#94a3b8" font-size="13" text-anchor="middle">opens form</text>
+
+    <rect x="326" y="62" width="268" height="110" rx="12" fill="#202637" stroke="#3f4a66"/>
+    <text x="460" y="96" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="middle">RP/ui/server_form.json</text>
+    <text x="460" y="126" fill="#cbd5e1" font-size="14" text-anchor="middle">routes title, text, buttons, fields</text>
+    <text x="460" y="150" fill="#94a3b8" font-size="13" text-anchor="middle">renders feature layout</text>
+
+    <rect x="684" y="62" width="194" height="110" rx="12" fill="#202637" stroke="#3f4a66"/>
+    <text x="781" y="100" fill="#f8fafc" font-size="20" font-weight="700" text-anchor="middle">Player</text>
+    <text x="781" y="130" fill="#cbd5e1" font-size="14" text-anchor="middle">clicks button</text>
+    <text x="781" y="152" fill="#94a3b8" font-size="13" text-anchor="middle">or submits fields</text>
+
+    <rect x="292" y="214" width="336" height="44" rx="10" fill="#151a24" stroke="#334155"/>
+    <text x="460" y="242" fill="#cbd5e1" font-size="15" text-anchor="middle">button index / custom form values return to server</text>
+  </g>
+</svg>

@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 const sharedNav = (prefix) => [
   { text: "Start", link: `${prefix}/guide/what-is-json-ui` },
-  { text: "Learn", link: `${prefix}/guide/resource-pack-flow` },
+  { text: "Server Forms", link: `${prefix}/server-forms/` },
   { text: "Reference", link: `${prefix}/reference/file-roles` },
   { text: "Patterns", link: `${prefix}/patterns/server-forms` }
 ];
@@ -20,6 +20,15 @@ const sidebars = {
       ]
     },
     {
+      text: "Server Forms",
+      items: [
+        { text: "Overview", link: "/en/server-forms/" },
+        { text: "Routing", link: "/en/server-forms/routing" },
+        { text: "Action Buttons", link: "/en/server-forms/action-buttons" },
+        { text: "Custom Forms", link: "/en/server-forms/custom-forms" }
+      ]
+    },
+    {
       text: "Reference",
       items: [
         { text: "File Roles", link: "/en/reference/file-roles" },
@@ -29,7 +38,7 @@ const sidebars = {
     {
       text: "Patterns",
       items: [
-        { text: "Server Forms", link: "/en/patterns/server-forms" },
+        { text: "Server Form Patterns", link: "/en/patterns/server-forms" },
         { text: "HUD And Chat", link: "/en/patterns/hud-chat" }
       ]
     }
@@ -46,6 +55,15 @@ const sidebars = {
       ]
     },
     {
+      text: "서버폼",
+      items: [
+        { text: "개요", link: "/ko/server-forms/" },
+        { text: "라우팅", link: "/ko/server-forms/routing" },
+        { text: "액션 버튼", link: "/ko/server-forms/action-buttons" },
+        { text: "커스텀 폼", link: "/ko/server-forms/custom-forms" }
+      ]
+    },
+    {
       text: "레퍼런스",
       items: [
         { text: "파일 역할", link: "/ko/reference/file-roles" },
@@ -55,7 +73,7 @@ const sidebars = {
     {
       text: "패턴",
       items: [
-        { text: "서버폼", link: "/ko/patterns/server-forms" },
+        { text: "서버폼 패턴", link: "/ko/patterns/server-forms" },
         { text: "HUD와 채팅", link: "/ko/patterns/hud-chat" }
       ]
     }
@@ -72,6 +90,15 @@ const sidebars = {
       ]
     },
     {
+      text: "Server Forms",
+      items: [
+        { text: "Resumen", link: "/es/server-forms/" },
+        { text: "Rutas", link: "/es/server-forms/routing" },
+        { text: "Botones De Accion", link: "/es/server-forms/action-buttons" },
+        { text: "Custom Forms", link: "/es/server-forms/custom-forms" }
+      ]
+    },
+    {
       text: "Referencia",
       items: [
         { text: "Roles De Archivos", link: "/es/reference/file-roles" },
@@ -81,7 +108,7 @@ const sidebars = {
     {
       text: "Patrones",
       items: [
-        { text: "Server Forms", link: "/es/patterns/server-forms" },
+        { text: "Patrones De Server Form", link: "/es/patterns/server-forms" },
         { text: "HUD Y Chat", link: "/es/patterns/hud-chat" }
       ]
     }
@@ -118,7 +145,7 @@ export default defineConfig({
       lang: "ko-KR",
       link: "/ko/",
       title: "MCBE JSON UI 위키",
-      description: "마인크래프트 베드락 JSON UI 입문 위키",
+      description: "마인크래프트 베드락 JSON UI를 처음부터 배우는 위키",
       themeConfig: {
         nav: sharedNav("/ko"),
         sidebar: sidebars.ko,
@@ -127,7 +154,7 @@ export default defineConfig({
       }
     },
     es: {
-      label: "Español",
+      label: "Espanol",
       lang: "es-ES",
       link: "/es/",
       title: "Wiki MCBE JSON UI",
