@@ -62,5 +62,9 @@ Escribe este contrato antes de construir la UI. La mayoría de server forms roto
 ## Páginas siguientes
 
 1. [Enrutamiento](./routing.md)
-2. [Botones de acción](./action-buttons.md)
-3. [Custom forms](./custom-forms.md)
+2. [Contrato del servidor](./server-contract.md)
+3. [Botones de acción](./action-buttons.md)
+4. [Custom forms](./custom-forms.md)
+5. [Barras de búsqueda](./search-bars.md)
+6. [Estados bloqueados](./locked-states.md)
+7. [Depuración](./debugging.md)

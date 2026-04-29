@@ -38,8 +38,12 @@ const sidebars = {
       items: [
         { text: "Overview", link: "/en/server-forms/" },
         { text: "Routing", link: "/en/server-forms/routing" },
+        { text: "Server Contract", link: "/en/server-forms/server-contract" },
         { text: "Action Buttons", link: "/en/server-forms/action-buttons" },
-        { text: "Custom Forms", link: "/en/server-forms/custom-forms" }
+        { text: "Custom Forms", link: "/en/server-forms/custom-forms" },
+        { text: "Search Bars", link: "/en/server-forms/search-bars" },
+        { text: "Locked States", link: "/en/server-forms/locked-states" },
+        { text: "Debugging", link: "/en/server-forms/debugging" }
       ]
     },
     {
@@ -73,8 +77,12 @@ const sidebars = {
       items: [
         { text: "개요", link: "/ko/server-forms/" },
         { text: "라우팅", link: "/ko/server-forms/routing" },
+        { text: "서버 계약", link: "/ko/server-forms/server-contract" },
         { text: "액션 버튼", link: "/ko/server-forms/action-buttons" },
-        { text: "커스텀 폼", link: "/ko/server-forms/custom-forms" }
+        { text: "커스텀 폼", link: "/ko/server-forms/custom-forms" },
+        { text: "검색 바", link: "/ko/server-forms/search-bars" },
+        { text: "잠금 상태", link: "/ko/server-forms/locked-states" },
+        { text: "디버깅", link: "/ko/server-forms/debugging" }
       ]
     },
     {
@@ -108,8 +116,12 @@ const sidebars = {
       items: [
         { text: "Resumen", link: "/es/server-forms/" },
         { text: "Enrutamiento", link: "/es/server-forms/routing" },
+        { text: "Contrato del servidor", link: "/es/server-forms/server-contract" },
         { text: "Botones de acción", link: "/es/server-forms/action-buttons" },
-        { text: "Custom forms", link: "/es/server-forms/custom-forms" }
+        { text: "Custom forms", link: "/es/server-forms/custom-forms" },
+        { text: "Barras de búsqueda", link: "/es/server-forms/search-bars" },
+        { text: "Estados bloqueados", link: "/es/server-forms/locked-states" },
+        { text: "Depuración", link: "/es/server-forms/debugging" }
       ]
     },
     {

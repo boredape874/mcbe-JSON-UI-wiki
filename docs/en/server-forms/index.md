@@ -62,5 +62,9 @@ Write the contract down before building the UI. Most broken server forms are not
 ## Next Pages
 
 1. [Routing](./routing.md)
-2. [Action Buttons](./action-buttons.md)
-3. [Custom Forms](./custom-forms.md)
+2. [Server Contract](./server-contract.md)
+3. [Action Buttons](./action-buttons.md)
+4. [Custom Forms](./custom-forms.md)
+5. [Search Bars](./search-bars.md)
+6. [Locked States](./locked-states.md)
+7. [Debugging](./debugging.md)
